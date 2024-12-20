@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi App Cordova</title>
+    <script src="cordova.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post a Project</h1>
+        <form id="postForm">
+            <input type="text" id="projectName" placeholder="Project Name" required />
+            <input type="text" id="company" placeholder="Company" required />
+            <textarea id="description" placeholder="Project Description" required></textarea>
+            <label>
+                <input type="checkbox" id="includeLocation" /> Include Location
+            </label>
+            <button type="submit">Post</button>
+        </form>
+        <div class="footer">
+            <a href="view.html">Search Project</a>
+            <a href="view.html">Post a Project</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("deviceready", function () {
+            // Aquí podrías poner más funcionalidad si lo necesitas
+            alert("El dispositivo está listo.");
+        }, false);
+
+        // Redirigir a "view.html" cuando se envíe el formulario
+        document.getElementById("postForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Evitar el comportamiento predeterminado del formulario
+            window.location.href = "view.html";  // Redirigir a "view.html"
+        });
+    </script>
+</body>
+</html>

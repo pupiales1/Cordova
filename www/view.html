@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscar Proyecto</title>
+    <script src="cordova.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .project-details {
+            background-color: #f8f8f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .project-details p {
+            margin: 5px 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Project</h1>
+        <input type="text" class="search-box" id="searchProject" placeholder="Project Name" />
+        <button>Search</button>
+
+        <!-- Project Details (Only visible after searching) -->
+        <div class="project-details" id="projectDetails">
+            <p><strong>Project Name:</strong> Javascript Developer</p>
+            <p><strong>Company:</strong> Sencha</p>
+            <p><strong>Location:</strong> <a href="#">Show on map</a></p>
+            <p><strong>Description:</strong> JS Dev</p>
+        </div>
+
+        <div class="footer">
+            <a href="index.html">Search Project</a>
+            <a href="index.html">Post a Project</a>
+        </div>
+    </div>
+</body>
+</html>
